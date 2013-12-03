@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <qsmodul translate="label">
+            <label>QS Modules</label>
+            <sort_order>250</sort_order>
+        </qsmodul>
+    </tabs>
+    <sections>
+        <qs translate="label" module="qs_smallinvoice">
+            <label>Smallinvoice</label>
+            <tab>qsmodul</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+            <groups>
+                <smallinvoice translate="label">
+                    <label>Smallinvoice Options</label>
+                    <frontend_class>create_account_tab</frontend_class>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <token translate="label">
+                            <label>API token</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <validate>required-entry</validate>
+                        </token>
+                        <api translate="label">
+                            <label>API url</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <validate>required-entry</validate>
+                        </api>
+                    </fields>
+                </smallinvoice>
+                <smallinvoice_customer translate="label">
+                    <label>Customer Defaults </label>
+                    <frontend_class>create_account_tab</frontend_class>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <country translate="label">
+                            <label>Country (Two-letter country code)</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>qs_smallinvoice/source_country</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>(Two-letter country code, CH e.g.)</comment>
+                        </country>
+                        <code translate="label">
+                            <label>ZIP code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>(8001, e.g.)</comment>
+                        </code>
+                        <gender translate="label">
+                            <label>Gender</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>qs_smallinvoice/source_gender</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </gender>
+                        <clientype translate="label">
+                            <label>Client type</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>qs_smallinvoice/source_clientype</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </clientype>
+                        <language translate="label">
+                            <label>Language</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>qs_smallinvoice/source_language</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>(Two-letter language code, de e.g.)</comment>
+                        </language>
+                        <run translate="label">
+                            <label>Import all customers</label>
+                            <frontend_type>button</frontend_type>
+                            <frontend_model>qs_smallinvoice/button</frontend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </run>
+                        <runclear translate="label">
+                            <label>Clear smallinvoice id's</label>
+                            <frontend_type>button</frontend_type>
+                            <frontend_model>qs_smallinvoice/buttoncustomerclear</frontend_model>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </runclear>
+                    </fields>
+                </smallinvoice_customer>
+                <smallinvoice_products>
+                    <label>Products Defaults </label>
+                    <frontend_class>create_account_tab</frontend_class>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <productunit>
+						    <label>Product Unit</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>qs_smallinvoice/source_productunit</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>(Select Default Catalog Unit)</comment>
+						</productunit>
+						<producttype>
+							<label>Product Type</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>qs_smallinvoice/source_producttype</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>(Select Default Catalog Type)</comment>
+						</producttype>
+                        <run translate="label">
+                            <label>Import all products</label>
+                            <frontend_type>button</frontend_type>
+                            <frontend_model>qs_smallinvoice/buttonproducts</frontend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </run>
+                        <runclear translate="label">
+                            <label>Clear smallinvoice id's</label>
+                            <frontend_type>button</frontend_type>
+                            <frontend_model>qs_smallinvoice/buttonproductclear</frontend_model>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </runclear>
+                    </fields>
+                </smallinvoice_products>
+                <smallinvoice_invoice>
+                    <label>Invoice, Receipt Defaults </label>
+                    <frontend_class>create_account_tab</frontend_class>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<due>
+							<label>Due date for invoice</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <validate>validate-number</validate>
+                            <comment>10, e.g.</comment>
+						</due>
+                        <title>
+							<label>Title for invoice</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+						</title>
+                        <titlereceipt>
+							<label>Title for receipt</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+						</titlereceipt>
+                    </fields>
+                </smallinvoice_invoice>
+            </groups>
+        </qs>
+    </sections>
+</config>
